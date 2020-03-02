@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapContraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".RiderActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RiderActivity"
+        tools:layout_editor_absoluteX="-45dp"
+        tools:layout_editor_absoluteY="-81dp"></fragment>
+
+    <Button
+        android:id="@+id/callUberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="callUber"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:text="Call Uber"
+
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+
+        app:layout_constraintVertical_bias="0.017"
+
+
+        />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:onClick="logout"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.0"
+
+
+        />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.972" />
+</androidx.constraintlayout.widget.ConstraintLayout>
