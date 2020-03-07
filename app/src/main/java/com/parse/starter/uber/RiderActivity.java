@@ -218,13 +218,10 @@ public class RiderActivity extends FragmentActivity implements OnMapReadyCallbac
 
 //   update Map
     public void updateMap(Location location){
-
-        if(driverActive != false) {
             mMap.clear();
             LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
             mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, 9.0f));
-        }
     }
 
 //    1.2.when user gives us permission
